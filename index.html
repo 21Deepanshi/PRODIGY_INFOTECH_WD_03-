@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tic-Tac-Toe Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <h1>Tic-Tac-Toe Game</h1>
+
+    <div id="gameModeSelection">
+        <button onclick="startGame('player')">Play Against Player</button>
+        <button onclick="startGame('ai')">Play Against AI</button>
+    </div>
+  
+    <h2 id="turnMessage" style="display:none;">Turn of X</h2>
+  
+    <table id="board" style="display:none;">
+        <tr>
+            <td id="cell00" onclick="cellClicked(0, 0)"></td>
+            <td id="cell01" onclick="cellClicked(0, 1)"></td>
+            <td id="cell02" onclick="cellClicked(0, 2)"></td>
+        </tr>
+        <tr>
+            <td id="cell10" onclick="cellClicked(1, 0)"></td>
+            <td id="cell11" onclick="cellClicked(1, 1)"></td>
+            <td id="cell12" onclick="cellClicked(1, 2)"></td>
+        </tr>
+        <tr>
+            <td id="cell20" onclick="cellClicked(2, 0)"></td>
+            <td id="cell21" onclick="cellClicked(2, 1)"></td>
+            <td id="cell22" onclick="cellClicked(2, 2)"></td>
+        </tr>
+    </table>
+  
+    <button id="restartButton" style="display:none;">Restart</button>
+    <button id="backButton" style="display:none;" onclick="goBack()">Back to Main Menu</button>
+  
+    <script src="script.js"></script>
+</body>
+</html>

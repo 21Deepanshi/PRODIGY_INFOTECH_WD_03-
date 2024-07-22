@@ -1,0 +1,75 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: "EB Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #f0f0f0;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+#turnMessage {
+  margin-bottom: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 20px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+td {
+    width: 80px;
+    height: 80px;
+    border: 3px solid #333;
+    text-align: center;
+    font-size: 3em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    background: linear-gradient(145deg, #ffffff, #f1f1f1);
+}
+
+td:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.1);
+}
+
+td.X {
+    color: #ff6f61;
+}
+
+td.O {
+    color: #4caf50;
+}
+
+.fall {
+    animation: fall-animation 0.5s ease-in-out;
+}
+
+@keyframes fall-animation {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+}
